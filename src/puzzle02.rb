@@ -1,9 +1,9 @@
 # frozen_string_literal: true
 
 class Puzzle02
-  def initialize(filename = nil, left = [], right = [])
-    if filename
-      left, right = read_inputs filename
+  def initialize(pathname = nil, left = [], right = [])
+    if pathname
+      left, right = read_inputs pathname
     end
     left.sort!
     right.sort!
@@ -27,10 +27,10 @@ class Puzzle02
     left.each.reduce(0) { |sum, num| sum + (num * element_count(num, right_element_counts)) }
   end
 
-  def read_inputs(filename)
+  def read_inputs(pathname)
     left = []
     right = []
-    file = File.open("/Users/peter/artisan/aoc2024/inputs/#{filename}")
+    file = File.open(pathname)
     inputs = file.readlines.map(&:chomp)
     inputs.each do |line|
       row = line.split(" ")
