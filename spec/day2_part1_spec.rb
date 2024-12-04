@@ -1,8 +1,8 @@
 # frozen_string_literal: true
 require 'rspec'
-require_relative '../src/puzzle03'
+require_relative '../src/day2_part1'
 
-describe 'Puzzle03' do
+describe 'Day2Part1' do
   before do
     # Do nothing
   end
@@ -12,14 +12,14 @@ describe 'Puzzle03' do
   end
 
   it 'can compare two integers' do
-    puzzle3 = Puzzle03.new nil
+    puzzle3 = Day2Part1.new nil
     expect(puzzle3.compare_ints 1, 1).to eq(0)
     expect(puzzle3.compare_ints 1, 4).to eq(-1)
     expect(puzzle3.compare_ints 3, 1).to eq(1)
   end
 
   it 'can determine safety' do
-    puzzle3 = Puzzle03.new nil
+    puzzle3 = Day2Part1.new nil
     expect(puzzle3.is_safe [1,2,3]).to be true
     expect(puzzle3.is_safe [1,2,5,6,7,8]).to be true # difference of 3
     expect(puzzle3.is_safe [1,2,6,7,8,9,10,11]).to be false # difference of 4

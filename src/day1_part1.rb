@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-class Puzzle01
+class Day1Part1
   def initialize(pathname)
     left, right = read_inputs pathname
     left.sort!

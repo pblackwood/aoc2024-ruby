@@ -1,8 +1,8 @@
 # frozen_string_literal: true
 require 'rspec'
-require_relative '../src/puzzle04'
+require_relative '../src/day2_part2'
 
-describe 'Puzzle04' do
+describe 'Day2Part2' do
   before do
     # Do nothing
   end
@@ -12,7 +12,7 @@ describe 'Puzzle04' do
   end
 
   it 'can determine safety' do
-    puzzle4 = Puzzle04.new nil
+    puzzle4 = Day2Part2.new nil
     expect(puzzle4.is_safe [1,2,3]).to be true
     expect(puzzle4.is_safe [1,2,5,6,7,8]).to be true # difference of 3
     expect(puzzle4.is_safe [1,2,6,7,8,9,10,11]).to be false # difference of 4
@@ -25,7 +25,7 @@ describe 'Puzzle04' do
   end
 
   it 'can create an array with one element missing (Part 2)' do
-    puzzle4 = Puzzle04.new nil
+    puzzle4 = Day2Part2.new nil
     original = [1,2,3]
     expect(puzzle4.array_with_a_hole original, 0).to eq([2,3])
     expect(original).to eq([1,2,3])
@@ -34,7 +34,7 @@ describe 'Puzzle04' do
   end
 
   it 'can determine dampened safety (Part 2)' do
-    puzzle4 = Puzzle04.new nil
+    puzzle4 = Day2Part2.new nil
     expect(puzzle4.is_safe [1,2,4,3,4]).to be false # both increasing and decreasing
     expect(puzzle4.is_dampened_safe [1,2,4,3,4]).to be true # safe if first 4 is removed
     expect(puzzle4.is_safe [1,2,2,3,4,5]).to be false # difference of 0

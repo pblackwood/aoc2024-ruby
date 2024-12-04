@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-class Puzzle02
+class Day1Part2
   def initialize(pathname = nil, left = [], right = [])
     if pathname
       left, right = read_inputs pathname
