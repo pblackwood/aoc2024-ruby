@@ -1,5 +1,5 @@
 # frozen_string_literal: true
 require_relative 'constants'
-require_relative 'puzzle04'
+require_relative 'day3_part1'
 
-Puzzle04.new "#{INPUTS_BASE}/Day02.txt"
+Day3Part1.new "#{INPUTS_BASE}/Day03.txt"
