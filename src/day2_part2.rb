@@ -30,9 +30,7 @@ class Day2Part2
 
   def is_dampened_safe(report)
     (0..report.length-1).each do |index_to_remove|
-      if is_safe(array_with_a_hole(report, index_to_remove))
-        return true
-      end
+      return true if is_safe(array_with_a_hole(report, index_to_remove))
     end
     false
   end
