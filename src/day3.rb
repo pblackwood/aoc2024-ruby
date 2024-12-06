@@ -6,7 +6,6 @@ class Day3Part1
   def initialize(pathname = nil, input = nil)
     if pathname
       matches = read_inputs pathname
-      puts matches.size
       puts evaluate_range matches
     end
 

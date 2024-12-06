@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 require 'rspec'
-require_relative '../src/day3_part1'
+require_relative '../src/day3'
 
 describe 'Day3Part1' do
 
