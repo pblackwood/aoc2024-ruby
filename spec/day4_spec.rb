@@ -1,14 +1,14 @@
 # frozen_string_literal: true
 require 'rspec'
-require_relative '../src/day4'
+require_relative '../src/day4_tree'
 
 describe 'Day4' do
 
   grid = %w[abcdef abcdef abcdef abcdef abcdef abcdef]
-  solution = Day4.new nil, grid
+  solution = Day4Tree.new nil, grid
 
   before do
-    solution = Day4.new nil, grid
+    solution = Day4Tree.new nil, grid
   end
 
   after do

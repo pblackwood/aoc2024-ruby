@@ -1,5 +1,5 @@
 # frozen_string_literal: true
 require_relative 'constants'
-require_relative 'day4'
+require_relative 'day4_grid'
 
-Day4.new "#{INPUTS_BASE}/Day04.txt"
+Day4Grid.new "#{INPUTS_BASE}/Day04.txt"

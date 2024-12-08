@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-class Day4
+class Day4Tree
   attr_reader :root_nodes
 
   def initialize(pathname = nil, grid = [])

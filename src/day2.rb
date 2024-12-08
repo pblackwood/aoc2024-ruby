@@ -29,11 +29,7 @@ class Day2Part1
   end
 
   def compare_ints(a, b)
-    if a > b
-      1
-    else
-      a < b ? -1 : 0
-    end
+    a <=> b
   end
 
   def read_inputs(pathname)
