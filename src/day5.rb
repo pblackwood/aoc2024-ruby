@@ -8,7 +8,8 @@ class Day5
     if updates_pathname
       init_updates(updates_pathname)
     end
-    puts solution
+    print "Part 1 solution: #{part1_solution}\n"
+    print "Part 2 solution: #{part2_solution}\n"
   end
 
   def init_ordering_rules(pathname)
@@ -23,7 +24,8 @@ class Day5
   end
 
   def init_updates(pathname)
-    @updates = []
+    @correct_updates = []
+    @incorrect_updates = []
     file = File.open(pathname)
     file.readlines(chomp: true).each do |line|
       update = line.split(",").map(&:to_i)
@@ -31,7 +33,9 @@ class Day5
         compare_pages(a, b)
       end
       if update == sorted_update
-        @updates << update
+        @correct_updates << sorted_update
+      else
+        @incorrect_updates << sorted_update
       end
     end
     # @updates.each do |u|
@@ -53,8 +57,14 @@ class Day5
     end
   end
 
-  def solution
-    @updates.each.reduce(0) do |sum, update|
+  def part1_solution
+    @correct_updates.each.reduce(0) do |sum, update|
+      sum + update[update.length / 2]
+    end
+  end
+
+  def part2_solution
+    @incorrect_updates.each.reduce(0) do |sum, update|
       sum + update[update.length / 2]
     end
   end
